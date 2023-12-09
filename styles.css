@@ -1,30 +1,47 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
 body{
-    width: 100vw;
-    height: 100vh;
+    min-height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
 
+.container{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-areas: "sb hdr"
+    "sb mcc" ;
+}
+
 .sidebar{
-    width: 25vw;
+    grid-area: sb;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto 50px auto 50px auto;
-    grid-template-areas: "sb-tab"
+    grid-template-rows: 15px auto 50px auto 50px auto 1fr;
+    grid-template-areas: "."
+    "sb-tab"
     "."
     "sb-s1"
     "."
-    "sb-s2";
+    "sb-s2"
+    ".";
+    background-color: rgb(25,146,212);
+    color: #FFFFFF;
 
 }
-
+/*
 .sidebar>div{
     border: 1px solid black;
 }
-
+*/
 .sidebar-tab{
     grid-area: sb-tab;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 
 .sidebar-s1{
@@ -35,30 +52,37 @@ body{
     grid-area: sb-s2;
 }
 
+.sidebar-s1, .sidebar-s2{
+    font-weight: 450;
+    font-size: 1.1rem;
+
+}
+
 .sidebar-tab{
     display: grid;
     align-items: center;
     grid-template-columns: 60px auto;
-    padding-left: 5%;
+    padding-left:11%;
 }
 
 .sidebar-s1>div, .sidebar-s2>div{
     display: grid;
     align-items: center;
     grid-template-columns: 50px auto;
-    padding-left: 10%;
+    padding-left: 15%;
 
 
 }
-
+/*
 .sidebar-s1>div, .sidebar-s2>div{
     border: 1px black solid;
 }
-
+*/
 #title-logo{
     height: 50px;
     width: 50px;
     grid-column: 1/2;
+    fill: #FFFFFF;
 }
 
 #title{
@@ -69,8 +93,17 @@ body{
     height: 25px;
     width: 25px;
     grid-column: 1/2;
+    fill: #FFFFFF;
 }
 
 .sidebar-title{
     grid-column: 2/3;
+}
+
+.header{
+    grid-area: hdr;
+}
+
+.main-content-container{
+    grid-area: mcc;
 }
