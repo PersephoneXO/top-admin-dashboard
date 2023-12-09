@@ -17,6 +17,8 @@ body{
     "sb mcc" ;
 }
 
+
+/*sidebar css*/
 .sidebar{
     grid-area: sb;
     display: grid;
@@ -100,9 +102,46 @@ body{
     grid-column: 2/3;
 }
 
+
+
+/*header css*/
 .header{
     grid-area: hdr;
+    padding-left: 4%;
+    display: grid;
+    grid-template-areas: "hr1"
+    "hr2";
 }
+
+.header-row1{
+    grid-area: hr1;
+}
+
+
+.header-icon{
+    height: 25px;
+}
+
+#header-profile-r1{
+    height: 50px;
+    fill: #facc14;
+}
+
+#header-name-r1{
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+
+
+.header-row2{
+grid-area: hr2;
+}
+
+
+
+
+
 
 .main-content-container{
     grid-area: mcc;
