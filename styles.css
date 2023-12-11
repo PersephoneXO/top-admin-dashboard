@@ -228,6 +228,8 @@ body{
     padding-top: 5px;
 }
 
+
+/*projects*/
 .projects-cards{
     grid-area: pc;
     display: grid;
@@ -235,7 +237,8 @@ body{
     "pc1 pc2"
     "pc3 pc4"
     "pc5 pc6";
-    gap: 25px;
+    row-gap: 10px;
+    column-gap: 10px;
 }
 
 #ptitle{
@@ -313,10 +316,13 @@ body{
 }
 
 
-
+/*announcement*/
 .announcement-cards{
     grid-area: ac;
+
 }
+
+
 
 .trending-cards{
     grid-area: tc;
