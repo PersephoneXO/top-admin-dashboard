@@ -226,6 +226,7 @@ body{
     "pc tc";
     padding-inline: 20px;
     padding-top: 5px;
+    column-gap: 20px;
 }
 
 
@@ -237,8 +238,8 @@ body{
     "pc1 pc2"
     "pc3 pc4"
     "pc5 pc6";
-    row-gap: 10px;
-    column-gap: 10px;
+    row-gap: 20px;
+    column-gap: 20px;
 }
 
 #ptitle{
@@ -319,8 +320,41 @@ body{
 /*announcement*/
 .announcement-cards{
     grid-area: ac;
+    display: grid;
+    grid-template-areas: "at"
+    "aac";
 
 }
+
+#atitle{
+    grid-area: at;
+}
+
+.all-acards{
+    grid-area: aac;
+    background-color: #ffffff;
+    padding-inline: 30px;
+    display: grid;
+    border-radius: 10px;
+}
+
+.acard-title{
+    font-weight: 600;
+}
+
+.acard-text{
+    color: #8a8a8a;
+    font-size: .9rem;
+}
+
+.acard-layout{
+    border-bottom: 1px #8a8a8a solid;
+}
+
+#acard3{
+    border-style: none;
+}
+
 
 
 
