@@ -222,14 +222,21 @@ body{
     grid-area: mcc;
     background-color: #e2e8f0;
     display: grid;
-    grid-template-areas: "pc ac"
-    "pc tc";
+    grid-template-areas: "pc rcc"
+    "pc rcc";
     padding-inline: 20px;
     padding-top: 25px;
     column-gap: 20px;
     max-width: 100vw;
 }
 
+.right-content-container{
+    grid-area: rcc;
+    display: grid;
+    grid-template-areas: "ac"
+    "tc";
+    align-content: space-between;
+}
 
 /*projects*/
 .projects-cards{
@@ -330,6 +337,7 @@ body{
     row-gap: 20px;
     min-width: min-content;
     max-width: 400px;
+    max-height: fit-content;
 }
 
 #atitle{
@@ -371,7 +379,72 @@ body{
 
 
 
-
+/*trending*/
 .trending-cards{
     grid-area: tc;
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-template-areas: "tt"
+    "atc";
+    row-gap: 20px;
+    min-width: min-content;
+    max-width: 400px;
+}
+
+#ttitle{
+    grid-area: tt;
+}
+
+.all-tcards{
+    grid-area: atc;
+    background-color: #ffffff;
+    padding-inline: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    display: grid;
+    row-gap: 25px;
+}
+
+.tcard-layout{
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: min-content auto;
+    grid-template-areas: "ti tn"
+    "ti tt";
+    align-items: center;
+    column-gap: 15px;
+}
+
+.tcard-name{
+    font-weight: 500;
+    grid-area: tn;
+    margin: 0;
+}
+
+.tcard-text{
+    color: #8a8a8a;
+    grid-area: tt;
+    margin: 0;
+}
+
+.tcard-img{
+    height: 50px;
+    grid-area: ti;
+}
+
+#tcard1{
+    fill: #e0f2fe;
+}
+
+#tcard2{
+    fill: #facc14;
+}
+
+#tcard3{
+    fill: #a3a3a3;
+}
+
+#tcard4{
+    fill: #fda4af;
 }
