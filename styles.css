@@ -23,7 +23,7 @@ body{
 .sidebar{
     grid-area: sb;
     display: grid;
-    grid-template-rows: 15px auto 50px auto 50px auto 1fr;
+    grid-template-rows: 5px auto 50px auto 50px auto 1fr;
     grid-template-areas: "."
     "sb-tab"
     "."
@@ -114,9 +114,10 @@ body{
     display: grid;
     grid-template-areas: "hr1"
     "hr2";
-    padding-top: 25px;
+    padding-top: 10px;
     background-color: #ffffff;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    z-index: 1;
 }
 
 .header-row1{
@@ -216,7 +217,107 @@ body{
 
 
 
-
+/*main content container css*/
 .main-content-container{
     grid-area: mcc;
+    background-color: #e2e8f0;
+    display: grid;
+    grid-template-areas: "pc ac"
+    "pc tc";
+    padding-inline: 20px;
+    padding-top: 5px;
+}
+
+.projects-cards{
+    grid-area: pc;
+    display: grid;
+    grid-template-areas: "pt ."
+    "pc1 pc2"
+    "pc3 pc4"
+    "pc5 pc6";
+    gap: 25px;
+}
+
+#ptitle{
+    grid-area: pt;
+}
+
+#pcard1{
+    grid-area: pc1;
+}
+
+#pcard2{
+    grid-area: pc2;
+}
+
+#pcard3{
+    grid-area: pc3;
+}
+
+#pcard4{
+    grid-area: pc4;
+}
+
+#pcard5{
+    grid-area: pc5;
+}
+
+#pcard6{
+    grid-area: pc6;
+}
+
+.main-titles{
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+.pcard-layout{
+    background-color: #ffffff;
+    padding-inline: 20px;
+
+    border-left: 10px #f0b429 solid;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    min-width:min-content;
+    max-width: 300px;
+    display: grid;
+    align-content: space-between;
+
+
+}
+
+.pcard-title{
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.pcard-text{
+    margin-top: 0;
+    color: #8a8a8a;
+}
+
+.pcard-buttons{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: end;
+    gap: 20px;
+
+}
+
+.pcard-icons{
+    height: 25px;
+    fill: #333333;
+}
+
+
+
+.announcement-cards{
+    grid-area: ac;
+}
+
+.trending-cards{
+    grid-area: tc;
 }
